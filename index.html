@@ -191,6 +191,11 @@
         padding: 8px 16px;
       }
     }
+
+    @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
   </style>
 </head>
 <body>
@@ -230,6 +235,52 @@
   <h2>Dear Vanshita,</h2>
   <div class="cravings-box">
     <p>Is this a difficult situation? YES. Is this a BIG DEAL? YES. Is this how you wanted things to turn out? NO. Will Vanshita get through with this, stronger as ever? HELL YES. Ayoo, I can't even imagine how it must feel right now. How exhausting, scary, mind fucking it must be. But damn, everytime I am looking at you, I start thinking omg, what a woman. WHAT A STRONG, INDEPENDENT WOMAN. And I for one am in awe of you. And i want you to know that no matter what, I am right here. I am here with you, for you, every step of the way. And I ain't leaving. Ask me for anything you need, please do not hesitate. You're gonna get through this, and you REALLY need to SLEEP. </p>
-    
+    <!-- ADD TO BOTTOM OF EXISTING BODY TAG IN index.html -->
+<h2>Pick the Best One</h2>
+<div id="imageGrid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; max-width: 500px; margin: 20px auto;">
+  <!-- 9 images -->
+  <img src="1.jpeg" onclick="checkChoice(0)" style="cursor:pointer; border-radius: 12px;width: 80px;height: 120px;">
+  <img src="2.png" onclick="checkChoice(1)" style="cursor:pointer; border-radius: 12px;width: 80px;height: 120px;">
+  <img src="3.jpeg" onclick="checkChoice(2)" style="cursor:pointer; border-radius: 12px;width: 80px;height: 120px;">
+  <img src="4.jpeg" onclick="checkChoice(3)" style="cursor:pointer; border-radius: 12px;width: 80px;height: 120px;">
+  <img id="correctImage" src="9.jpeg" onclick="checkChoice(4)" style="cursor:pointer; border-radius: 12px;width: 80px;height: 120px;">
+  <img src="5.jpg" onclick="checkChoice(5)" style="cursor:pointer; border-radius: 12px;width: 80px;height: 120px;">
+  <img src="6.jpeg" onclick="checkChoice(6)" style="cursor:pointer; border-radius: 12px;width: 80px;height: 120px;">
+  <img src="7.jpeg" onclick="checkChoice(7)" style="cursor:pointer; border-radius: 12px;width: 80px;height: 120px;">
+  <img src="8.png" onclick="checkChoice(8)" style="cursor:pointer; border-radius: 12px;width: 80px;height: 120px;">
+</div>
+<!-- Popup Modal -->
+<div id="popupBox" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; animation: fadeIn 0.4s ease-in-out;">
+  <div style="background: white; padding: 20px; border-radius: 16px; max-width: 300px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+    <img src="9.jpeg" style="border: 3px solid green; border-radius: 12px; margin-bottom: 10px;">
+    <p style="font-size: 1rem; color: #4a148c; margin: 10px 0;" id="popupText"></p>
+    <button onclick="closePopup()" style="margin-top: 10px; padding: 8px 16px; border: none; background-color: #f48fb1; color: white; border-radius: 8px; cursor: pointer;">Close</button>
+  </div>
+</div>
+
+<h2>Dear Vanshita,</h2>
+<div class="cravings-box">
+  <p>I know things have been very difficult, and in this process I am getting to know the person that you are. The real you. Remember how on our first date after we came to your house you said "Okay, lets get real Harshiv" and then asked me something. In these past 3 weeks(Yes, exactly 3 weeks), I've come to get to know this strong, loving, caring, REAL you, that i could not have known better any other way. I am learning to understand how this person has become who she is. And while that has been extremely difficult, while I can never really understand or even imagine all that you've been through, while you are still dealing with everything and healing, I respect and care for this person more than you know. More than I can express. So now that you are going to take another step towards your growing and healing, I want you to know that I am right here, by your side, through it all. Because like we agree "HEALING IS HOT". So take a deep breath, it gets worse before it gets better. And if there is one person I know who can do it all, IT'S YOU.   </p>
+
+<script>
+function checkChoice(index) {
+  const correctIndex = 4;
+  const popup = document.getElementById("popupBox");
+  const popupText = document.getElementById("popupText");
+  const correctImage = document.getElementById("correctImage");
+
+  if (index === correctIndex) {
+    popupText.innerHTML = "<b>Okay, you're not that dumb.</b><br>You picked the best ✨";
+  } else {
+    popupText.innerHTML = "<b>NO, WRONG CHOICE</b><br>✓ I'd choose you over them all, always.";
+  }
+
+  popup.style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("popupBox").style.display = "none";
+}
+</script>
 </body>
 </html>

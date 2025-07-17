@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanshita's Book of Quotes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Floating Theme Switcher -->
+    <div class="theme-fab" id="themeFab">
+        <i class="fas fa-palette"></i>
+    </div>
+    <div class="theme-popover" id="themePopover">
+        <div class="theme-popover-header">Choose Theme <span id="closeThemePopover">&times;</span></div>
+        <select id="theme-switcher">
+            <option value="default">Default</option>
+            <option value="cute">Cute</option>
+            <option value="professional">Professional</option>
+        </select>
+    </div>
+    <div class="book-container">
+        <!-- Book Cover -->
+        <div class="book-cover" id="cover">
+            <div class="cover-content">
+                <div class="cover-title">
+                    <h1>Vanshita's</h1>
+                    <h2>Book of Quotes</h2>
+                </div>
+                <div class="cover-decoration">
+                    <div class="flower"></div>
+                    <div class="flower"></div>
+                    <div class="flower"></div>
+                </div>
+                <div class="cover-subtitle">
+                    <p>A collection of <b>"thoughts"</b>, <b>"wisdom"</b>, and <b>"words that matter"</b></p>
+                </div>
+                <button class="open-book-btn" onclick="openBook()">
+                    <i class="fas fa-book-open"></i>
+                    Open Book
+                </button>
+            </div>
+        </div>
+
+        <!-- Book Pages -->
+        <div class="book" id="book">
+            <div class="book-pages">
+                <!-- Page 1: Title Page -->
+                <div class="page" id="page1">
+                    <div class="page-content">
+                        <div class="page-number">1</div>
+                        <div class="quote-content">
+                            <h3>Happy Birthday Vanshita!</h3>
+                            <p>You are one of the most funny, unhinged, smart, interesting and hardworking people I know. Over this span of 4 and a half months, you have made some very interesting, and note worthy statements out load. This book is a collection of some of the best ones, that I will keep updating. You told me that you'd like somebody to convert your quotes into a book. Well, this is my version of it. I hope you like it. Happy Birthday Vanshita! </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 2 -->
+                <div class="page" id="page2">
+                    <div class="page-content">
+                        <div class="page-number">2</div>
+                        <div class="quote-content">
+                            <h3>Quote 1</h3>
+                            <p class="quote-text">"I have a 'Bob The Builder' personality"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 3 -->
+                <div class="page" id="page3">
+                    <div class="page-content">
+                        <div class="page-number">3</div>
+                        <div class="quote-content">
+                            <h3>Quote 2</h3>
+                            <p class="quote-text">"Abhorrent!!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 4 -->
+                <div class="page" id="page4">
+                    <div class="page-content">
+                        <div class="page-number">4</div>
+                        <div class="quote-content">
+                            <h3>Quote 3</h3>
+                            <p class="quote-text">"Yeh kaisi second date hai? Ghar jaa ke belto se marungi"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 5 -->
+                <div class="page" id="page5">
+                    <div class="page-content">
+                        <div class="page-number">5</div>
+                        <div class="quote-content">
+                            <h3>Quote 4</h3>
+                            <p class="quote-text">"a'ight a'ight a'ight, that's super cool , that's super new"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 6 -->
+                <div class="page" id="page6">
+                    <div class="page-content">
+                        <div class="page-number">6</div>
+                        <div class="quote-content">
+                            <h3>Quote 5</h3>
+                            <p class="quote-text">"I want to be like Rakhi Sawant from Pardesiyan"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 7 -->
+                <div class="page" id="page7">
+                    <div class="page-content">
+                        <div class="page-number">7</div>
+                        <div class="quote-content">
+                            <h3>Quote 6</h3>
+                            <p class="quote-text">"Mujhe naa, kuch achha, garam garam, mow mow khaana hai"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 8 -->
+                <div class="page" id="page8">
+                    <div class="page-content">
+                        <div class="page-number">8</div>
+                        <div class="quote-content">
+                            <h3>Quote 7</h3>
+                            <p class="quote-text">"Thoo Diyaaa"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 9 -->
+                <div class="page" id="page9">
+                    <div class="page-content">
+                        <div class="page-number">9</div>
+                        <div class="quote-content">
+                            <h3>Quote 8</h3>
+                            <p class="quote-text">"Pandupi se jaungii"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 10 -->
+                <div class="page" id="page10">
+                    <div class="page-content">
+                        <div class="page-number">10</div>
+                        <div class="quote-content">
+                            <h3>Quote 9</h3>
+                            <p class="quote-text">"Ladki maar di meri. Pochhe Pochhe se character banta hai"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 11 -->
+                <div class="page" id="page11">
+                    <div class="page-content">
+                        <div class="page-number">11</div>
+                        <div class="quote-content">
+                            <h3>Quote 10</h3>
+                            <p class="quote-text">"Tawa sexuality"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 12 -->
+                <div class="page" id="page12">
+                    <div class="page-content">
+                        <div class="page-number">12</div>
+                        <div class="quote-content">
+                            <h3>Quote 11</h3>
+                            <p class="quote-text">"You know, as a third person, objectively."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 13 -->
+                <div class="page" id="page13">
+                    <div class="page-content">
+                        <div class="page-number">13</div>
+                        <div class="quote-content">
+                            <h3>Quote 12</h3>
+                            <p class="quote-text">"Sexxx kar diyaa"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 14 -->
+                <div class="page" id="page14">
+                    <div class="page-content">
+                        <div class="page-number">14</div>
+                        <div class="quote-content">
+                            <h3>Quote 13</h3>
+                            <p class="quote-text">"Tum do aansu tapkaugi, maasum ban jaogi"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 15 -->
+                <div class="page" id="page15">
+                    <div class="page-content">
+                        <div class="page-number">15</div>
+                        <div class="quote-content">
+                            <h3>Quote 14</h3>
+                            <p class="quote-text">"love you from last life"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 16 -->
+                <div class="page" id="page16">
+                    <div class="page-content">
+                        <div class="page-number">16</div>
+                        <div class="quote-content">
+                            <h3>Quote 15</h3>
+                            <p class="quote-text">"interesting. muchos interesting."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 8: Back Cover -->
+                <div class="page" id="page8">
+                    <div class="page-content">
+                        <div class="back-cover">
+                            <h3>The End</h3>
+                            <p>Thank you for reading<br>Vanshita's Book of Quotes</p>
+                            <div class="cover-decoration">
+                                <div class="flower"></div>
+                                <div class="flower"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation -->
+        <div class="book-navigation">
+            <button class="nav-btn prev-btn" onclick="previousPage()" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="page-indicator">
+                <span id="currentPage">1</span> / <span id="totalPages">8</span>
+            </div>
+            <button class="nav-btn next-btn" onclick="nextPage()" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Close Book Button -->
+        <button class="close-book-btn" onclick="closeBook()" id="closeBtn">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="floating-heart">❤</div>
+        <div class="floating-star">⭐</div>
+        <div class="floating-flower">🌸</div>
+        <div class="floating-heart">💖</div>
+        <div class="floating-star">✨</div>
+    </div>
+
+    <div class="feature-sections">
+        <div class="feature-card">
+            <button id="export-pdf-btn"><i class="fas fa-file-pdf"></i> Export as PDF</button>
+        </div>
+        <div class="feature-card guestbook-card">
+            <h2>Guestbook</h2>
+            <form id="guestbook-form">
+                <input type="text" id="guest-name" placeholder="Your Name" required />
+                <textarea id="guest-message" placeholder="Your Message" required></textarea>
+                <input type="file" id="guest-image" accept="image/*" />
+                <button type="submit">Sign Guestbook</button>
+            </form>
+            <div id="guestbook-entries"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
